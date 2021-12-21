@@ -112,9 +112,9 @@ namespace LibraryConsoleApp
 
         static IEnumerable<Book> GetBookThatEndWithY(Book[] booksArray3)
         {
-            var books = from book in booksArray3
-                        where book.BookName[book.BookName.Length - 1] == 'y'
-                        select book;
+            IEnumerable<Book> books = from book in booksArray3
+                                      where book.BookName[book.BookName.Length - 1] == 'y'
+                                      select book;
 
             return books;
         }
